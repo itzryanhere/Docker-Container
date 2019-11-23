@@ -1,6 +1,6 @@
 # Build environment for LineageOS
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER Michael Stucki <michael@stucki.io>
 
 
@@ -75,6 +75,8 @@ RUN \
 
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo \
  && chmod a+x /usr/local/bin/repo
+
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # Add sudo permission
 RUN echo "build ALL=NOPASSWD: ALL" > /etc/sudoers.d/build
