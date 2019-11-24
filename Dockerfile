@@ -18,7 +18,7 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list \
  && apt-get update \
  && apt-get upgrade -y \
  && apt-get install -y \
-# Install build dependencies (source: https://wiki.cyanogenmod.org/w/Build_for_bullhead)
+# Install build dependencies (source: https://wiki.lineageos.org/devices/oneplus3/build)
       bc \
       bison \
       build-essential \
@@ -43,7 +43,6 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list \
       libxml2-utils \
       lzop \
       pngcrush \
-	  python-minimal \
       rsync \
       schedtool \
       squashfs-tools \
@@ -51,7 +50,7 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list \
       zip \
       zlib1g-dev \
 # Install Java Development Kit
-      openjdk-8-jdk \
+#      openjdk-8-jdk \
 # Install additional packages which are useful for building Android
       android-tools-adb \
       android-tools-fastboot \
@@ -64,6 +63,8 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list \
       tig \
       vim \
       wget \
+# Ubuntu Docker image comes with python3 as std but we need python2.7 
+	  python-minimal \
  && rm -rf /var/lib/apt/lists/*
 
 ARG hostuid=1000
