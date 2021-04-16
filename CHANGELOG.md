@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.0.0] - 2021-04-16
+### Added by sky
+- Ubuntu 20.04
+- Adjust LineageOS version to lineage-18.1
+
 ## [0.9.0] - 2019-11-23
 ### Added by sky
 - Ubuntu 18.04
