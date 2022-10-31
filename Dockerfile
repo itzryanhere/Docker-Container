@@ -78,6 +78,9 @@ RUN \
 
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo \
  && chmod a+x /usr/local/bin/repo
+ 
+# Symlink python3
+RUN ln -sf /usr/bin/python3 /usr/bin/python
 
 # Add sudo permission
 RUN echo "build ALL=NOPASSWD: ALL" > /etc/sudoers.d/build
