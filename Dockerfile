@@ -1,6 +1,6 @@
 # Build environment for LineageOS
 
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 MAINTAINER Michael Stucki <michael@stucki.io>
 
 
@@ -34,11 +34,12 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list \
       lib32ncurses5-dev \
       lib32readline-dev \
       lib32z1-dev \
+	  libelf-dev \
       liblz4-tool \
+	  libncurses5 \
       libncurses5-dev \
       libsdl1.2-dev \
       libssl-dev \
-      libwxgtk3.0-dev \
       libxml2 \
       libxml2-utils \
       lzop \
@@ -64,8 +65,8 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list \
       vim \
       wget \
 # Ubuntu Docker image comes with python3 as std but we need python2.7 
-      python-minimal \
- && rm -rf /var/lib/apt/lists/*
+#      python-minimal \
+# && rm -rf /var/lib/apt/lists/*
 
 ARG hostuid=1000
 ARG hostgid=1000
