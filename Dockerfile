@@ -66,7 +66,7 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list \
       wget \
 # Ubuntu Docker image comes with python3 as std but we need python2.7 
 #      python-minimal \
-# && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/*
 
 ARG hostuid=1000
 ARG hostgid=1000
