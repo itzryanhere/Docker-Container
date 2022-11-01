@@ -6,7 +6,7 @@ MAINTAINER Michael Stucki <michael@stucki.io>
 
 ENV \
 # ccache specifics
-    CCACHE_SIZE=50G \
+    CCACHE_SIZE=20G \
     CCACHE_DIR=/srv/ccache \
     USE_CCACHE=1 \
     CCACHE_COMPRESS=1 \
