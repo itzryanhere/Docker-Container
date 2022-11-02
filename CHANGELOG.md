@@ -4,11 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.0.0] - 2022-11-01
+### Added by sky
+- Ubuntu 22.04
+- Adjust LineageOS version to lineage-18.1
+- symlink python to python3
+
 ## [0.9.0] - 2019-11-23
 ### Added by sky
 - Ubuntu 18.04
 - Adjust LineageOS version to lineage-16.0
-- link python to python3
 
 ## [0.8.0] - 2018-11-19
 ### Added
